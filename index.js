@@ -237,16 +237,16 @@ var check = students.filter(function(record){
 console.log(check);
 
 //CALCULATE THE AVERAGE GRADES AND OUPUT THE MAXIMUM
-var arr = 0;
+var maxavg = 0;
 var ans ;
 
 students.forEach((value,index,data) =>{
     var sum = value.grade.reduce((previous,current) => current+previous);
     var avg = sum/value.grade.length;
-   if(arr < avg){
-       arr = avg;
+   if(maxavg < avg){
+       maxavg = avg;
        ans = index;
    }
 });
-console.log("\n\nThis Student has the maximum grade \n\n" ,students[ans]);
+console.log("\n\nThis Student has the maximum grade Average \n\n" ,students[ans]);
 
